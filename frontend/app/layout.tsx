@@ -14,8 +14,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-    title: "Spots",
-    description: "Open Classrooms @ UWaterloo",
+    title: "Luther Spots",
+    description: "Open Classrooms @ Luther College",
 };
 
 export default function RootLayout({
