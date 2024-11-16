@@ -27,6 +27,8 @@ interface dataFormat {
     distance: number;
 }
 
+const backendUrl = "https://luther-spots.onrender.com/api/open-classrooms";
+
 export default function Home() {
     const [data, setData] = useState<dataFormat[]>([]);
     const [activeBuilding, setActiveBuilding] = useState<string | null>(null);
@@ -53,7 +55,7 @@ export default function Home() {
 
                         try {
                             // Send the user's location to the backend
-                            const res = await fetch("/api/open-classrooms", {
+                            const res = await fetch(backendUrl, {
                                 method: "POST",
                                 headers: {
                                     "Content-Type": "application/json",
@@ -79,7 +81,7 @@ export default function Home() {
                         console.error("Error fetching location here:", error);
 
                         // Fallback to fetching unsorted data
-                        const res = await fetch("/api/open-classrooms");
+                        const res = await fetch(backendUrl, {method: "GET"});
                         const defaultData = await res.json();
                         setData(defaultData);
 
@@ -90,7 +92,7 @@ export default function Home() {
                 );
             } else {
                 console.error("Geolocation is not supported by this browser.");
-                const res = await fetch("/api/open-classrooms", {
+                const res = await fetch(backendUrl, {
                     method: "GET",
                 });
                 const defaultData = await res.json();
