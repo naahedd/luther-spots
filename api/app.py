@@ -5,7 +5,18 @@ import json
 import math
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={
+    r"/api/*": {
+        "origins": [
+            "http://localhost:3000",                # Local development
+            "https://*.vercel.app",                 # All Vercel preview deployments
+        ],
+        "methods": ["GET", "POST"],
+        "allow_headers": ["Content-Type"],
+        "expose_headers": ["Content-Type"],
+        "supports_credentials": True
+    }
+})
 
 # Load JSON data for your college
 def load_college_data():
@@ -157,4 +168,4 @@ def get_open_classrooms():
     return jsonify(building_info_list)
 
 if __name__ == '__main__':
-    app = app
+    app.run()
