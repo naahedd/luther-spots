@@ -1,0 +1,354 @@
+{
+    "meta": {
+      "status": 200,
+      "type": "success",
+      "message": null,
+      "errors": null,
+      "datetime": "2024-11-11T21:00:55Z"
+    },
+    "data": {
+      "type": "FeatureCollection",
+      "features": [
+        {
+          "type": "Feature",
+          "properties": {
+            "buildingId": "1",
+            "buildingCode": "VHS",
+            "buildingName": "Valders Hall of Science",
+            "supportOpenClassroom": true,
+            "openClassroomSlots": {
+              "data": [
+                {
+                  "roomNumber": "369",
+                  "buildingCode": "VHS",
+                  "Schedule": [
+                    { "Weekday": "MON", "Slots": [{ "StartTime": "13:00:00", "EndTime": "18:00:00" }] },
+                    { "Weekday": "TUES", "Slots": [{ "StartTime": "16:00:00", "EndTime": "18:00:00" }] },
+                    { "Weekday": "WED", "Slots": [{ "StartTime": "13:00:00", "EndTime": "18:00:00" }] },
+                    { "Weekday": "THURS", "Slots": [{ "StartTime": "16:00:00", "EndTime": "18:00:00" }] },
+                    { "Weekday": "FRI", "Slots": [{ "StartTime": "13:00:00", "EndTime": "18:00:00" }] },
+                    { "Weekday": "SAT", "Slots": [{ "StartTime": "08:00:00", "EndTime": "22:00:00" }] },
+                    { "Weekday": "SUN", "Slots": [{ "StartTime": "08:00:00", "EndTime": "23:00:00" }] }
+                  ]
+                }
+              ]
+            },
+            "lastUpdated": "2024-11-11T21:00:55Z"
+          },
+          "geometry": { "type": "Point", "coordinates": [43.31345811273839, -91.80442480356346] }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+              "buildingId": "2",
+              "buildingCode": "OL",
+              "buildingName": "Olin",
+              "supportOpenClassroom": true,
+              "openClassroomSlots": {
+                "data": [
+                  {
+                    "roomNumber": "107",
+                    "buildingCode": "OL",
+                    "Schedule": [
+                      { "Weekday": "MON", "Slots": [{ "StartTime": "10:30:00", "EndTime": "23:00:00" }] },
+                      { "Weekday": "TUES", "Slots": [{ "StartTime": "08:00:00", "EndTime": "10:30:00" }, { "StartTime": "12:45:00", "EndTime": "23:00:00" }] },
+                      { "Weekday": "WED", "Slots": [{ "StartTime": "10:30:00", "EndTime": "23:00:00" }] },
+                      { "Weekday": "THURS", "Slots": [{ "StartTime": "08:00:00", "EndTime": "10:30:00" }, { "StartTime": "12:45:00", "EndTime": "23:00:00" }] },
+                      { "Weekday": "FRI", "Slots": [{ "StartTime": "10:30:00", "EndTime": "23:00:00" }] },
+                      { "Weekday": "SAT", "Slots": [{ "StartTime": "08:00:00", "EndTime": "22:00:00" }] },
+                      { "Weekday": "SUN", "Slots": [{ "StartTime": "08:00:00", "EndTime": "23:00:00" }] }
+                    ]
+                  },
+                  {
+                    "roomNumber": "108",
+                    "buildingCode": "OL",
+                    "Schedule": [
+                      { "Weekday": "MON", "Slots": [{ "StartTime": "13:30:00", "EndTime": "18:30:00" }, { "StartTime": "21:00:00", "EndTime": "23:00:00" }] },
+                      { "Weekday": "TUES", "Slots": [{ "StartTime": "08:00:00", "EndTime": "18:30:00" }, { "StartTime": "21:00:00", "EndTime": "23:00:00" }] },
+                      { "Weekday": "WED", "Slots": [{ "StartTime": "13:30:00", "EndTime": "18:30:00" }, { "StartTime": "21:00:00", "EndTime": "23:00:00" }] },
+                      { "Weekday": "THURS", "Slots": [{ "StartTime": "08:00:00", "EndTime": "18:30:00" }, { "StartTime": "21:00:00", "EndTime": "23:00:00" }] },
+                      { "Weekday": "FRI", "Slots": [{ "StartTime": "13:30:00", "EndTime": "22:00:00" }] },
+                      { "Weekday": "SAT", "Slots": [{ "StartTime": "08:00:00", "EndTime": "22:00:00" }] },
+                      { "Weekday": "SUN", "Slots": [{ "StartTime": "08:00:00", "EndTime": "23:00:00" }] }
+                    ]
+                  },
+                  {
+                    "roomNumber": "112",
+                    "buildingCode": "OL",
+                    "Schedule": [
+                      { "Weekday": "MON", "Slots": [{ "StartTime": "14:30:00", "EndTime": "23:00:00" }] },
+                      { "Weekday": "TUES", "Slots": [{ "StartTime": "10:00:00", "EndTime": "12:30:00" }, { "StartTime": "14:30:00", "EndTime": "23:00:00" }] },
+                      { "Weekday": "WED", "Slots": [{ "StartTime": "14:30:00", "EndTime": "23:00:00" }] },
+                      { "Weekday": "THURS", "Slots": [{ "StartTime": "10:00:00", "EndTime": "12:30:00" }, { "StartTime": "14:30:00", "EndTime": "23:00:00" }] },
+                      { "Weekday": "FRI", "Slots": [{ "StartTime": "14:30:00", "EndTime": "22:00:00" }] },
+                      { "Weekday": "SAT", "Slots": [{ "StartTime": "08:00:00", "EndTime": "22:00:00" }] },
+                      { "Weekday": "SUN", "Slots": [{ "StartTime": "08:00:00", "EndTime": "23:00:00" }] }
+                    ]
+                  },
+                  {
+                    "roomNumber": "113",
+                    "buildingCode": "OL",
+                    "Schedule": [
+                      { "Weekday": "MON", "Slots": [{ "StartTime": "14:30:00", "EndTime": "23:00:00" }] },
+                      { "Weekday": "TUES", "Slots": [{ "StartTime": "08:00:00", "EndTime": "10:30:00" }, { "StartTime": "15:30:00", "EndTime": "23:00:00" }] },
+                      { "Weekday": "WED", "Slots": [{ "StartTime": "14:30:00", "EndTime": "23:00:00" }] },
+                      { "Weekday": "THURS", "Slots": [{ "StartTime": "08:00:00", "EndTime": "10:30:00" }, { "StartTime": "13:00:00", "EndTime": "23:00:00" }] },
+                      { "Weekday": "FRI", "Slots": [{ "StartTime": "14:30:00", "EndTime": "22:00:00" }] },
+                      { "Weekday": "SAT", "Slots": [{ "StartTime": "08:00:00", "EndTime": "22:00:00" }] },
+                      { "Weekday": "SUN", "Slots": [{ "StartTime": "08:00:00", "EndTime": "23:00:00" }] }
+                    ]
+                  },
+                  {
+                    "roomNumber": "101",
+                    "buildingCode": "OL",
+                    "Schedule": [
+                      { "Weekday": "MON", "Slots": [{ "StartTime": "15:00:00", "EndTime": "23:00:00" }] },
+                      { "Weekday": "TUES", "Slots": [{ "StartTime": "08:00:00", "EndTime": "23:00:00" }] },
+                      { "Weekday": "WED", "Slots": [{ "StartTime": "15:00:00", "EndTime": "23:00:00" }] },
+                      { "Weekday": "THURS", "Slots": [{ "StartTime": "08:00:00", "EndTime": "23:00:00" }] },
+                      { "Weekday": "FRI", "Slots": [{ "StartTime": "15:00:00", "EndTime": "22:00:00" }] },
+                      { "Weekday": "SAT", "Slots": [{ "StartTime": "08:00:00", "EndTime": "22:00:00" }] },
+                      { "Weekday": "SUN", "Slots": [{ "StartTime": "08:00:00", "EndTime": "23:00:00" }] }
+                    ]
+                  },
+                  {
+                    "roomNumber": "102",
+                    "buildingCode": "OL",
+                    "Schedule": [
+                      { "Weekday": "MON", "Slots": [{ "StartTime": "10:30:00", "EndTime": "23:00:00" }] },
+                      { "Weekday": "TUES", "Slots": [{ "StartTime": "11:30:00", "EndTime": "23:00:00" }] },
+                      { "Weekday": "WED", "Slots": [{ "StartTime": "10:30:00", "EndTime": "23:00:00" }] },
+                      { "Weekday": "THURS", "Slots": [{ "StartTime": "11:30:00", "EndTime": "23:00:00" }] },
+                      { "Weekday": "FRI", "Slots": [{ "StartTime": "10:30:00", "EndTime": "22:00:00" }] },
+                      { "Weekday": "SAT", "Slots": [{ "StartTime": "08:00:00", "EndTime": "22:00:00" }] },
+                      { "Weekday": "SUN", "Slots": [{ "StartTime": "08:00:00", "EndTime": "23:00:00" }] }
+                    ]
+                  },
+                  {
+                    "roomNumber": "105",
+                    "buildingCode": "OL",
+                    "Schedule": [
+                      { "Weekday": "MON", "Slots": [{ "StartTime": "08:00:00", "EndTime": "12:00:00" }, { "StartTime": "13:30:00", "EndTime": "23:00:00" }] },
+                      { "Weekday": "TUES", "Slots": [{ "StartTime": "08:00:00", "EndTime": "23:00:00" }] },
+                      { "Weekday": "WED", "Slots": [{ "StartTime": "08:00:00", "EndTime": "12:00:00" }, { "StartTime": "13:30:00", "EndTime": "23:00:00" }] },
+                      { "Weekday": "THURS", "Slots": [{ "StartTime": "08:00:00", "EndTime": "23:00:00" }] },
+                      { "Weekday": "FRI", "Slots": [{ "StartTime": "08:00:00", "EndTime": "12:00:00" }, { "StartTime": "13:30:00", "EndTime": "22:00:00" }] },
+                      { "Weekday": "SAT", "Slots": [{ "StartTime": "08:00:00", "EndTime": "22:00:00" }] },
+                      { "Weekday": "SUN", "Slots": [{ "StartTime": "08:00:00", "EndTime": "23:00:00" }] }
+                    ]
+                  },
+                  {
+                    "roomNumber": "104",
+                    "buildingCode": "OL",
+                    "Schedule": [
+                      { "Weekday": "MON", "Slots": [{ "StartTime": "08:00:00", "EndTime": "13:00:00" }, { "StartTime": "14:45:00", "EndTime": "23:00:00" }] },
+                      { "Weekday": "TUES", "Slots": [{ "StartTime": "09:45:00", "EndTime": "23:00:00" }] },
+                      { "Weekday": "WED", "Slots": [{ "StartTime": "08:00:00", "EndTime": "13:00:00" }, { "StartTime": "14:45:00", "EndTime": "23:00:00" }] },
+                      { "Weekday": "THURS", "Slots": [{ "StartTime": "09:45:00", "EndTime": "23:00:00" }] },
+                      { "Weekday": "FRI", "Slots": [{ "StartTime": "10:30:00", "EndTime": "13:00:00" }, { "StartTime": "15:00:00", "EndTime": "22:00:00" }] },
+                      { "Weekday": "SAT", "Slots": [{ "StartTime": "08:00:00", "EndTime": "22:00:00" }] },
+                      { "Weekday": "SUN", "Slots": [{ "StartTime": "08:00:00", "EndTime": "23:00:00" }] }
+                    ]
+                  },
+                  {
+                    "roomNumber": "202",
+                    "buildingCode": "OL",
+                    "Schedule": [
+                      { "Weekday": "MON", "Slots": [{ "StartTime": "15:00:00", "EndTime": "23:00:00" }] },
+                      { "Weekday": "TUES", "Slots": [{ "StartTime": "08:00:00", "EndTime": "10:45:00" }, { "StartTime": "14:30:00", "EndTime": "23:00:00" }] },
+                      { "Weekday": "WED", "Slots": [{ "StartTime": "15:00:00", "EndTime": "23:00:00" }] },
+                      { "Weekday": "THURS", "Slots": [{ "StartTime": "08:00:00", "EndTime": "10:45:00" }, { "StartTime": "14:30:00", "EndTime": "23:00:00" }] },
+                      { "Weekday": "FRI", "Slots": [{ "StartTime": "15:00:00", "EndTime": "22:00:00" }] },
+                      { "Weekday": "SAT", "Slots": [{ "StartTime": "08:00:00", "EndTime": "22:00:00" }] },
+                      { "Weekday": "SUN", "Slots": [{ "StartTime": "08:00:00", "EndTime": "23:00:00" }] }
+                    ]
+                  },
+                  {
+                    "roomNumber": "206",
+                    "buildingCode": "OL",
+                    "Schedule": [
+                      { "Weekday": "MON", "Slots": [{ "StartTime": "15:00:00", "EndTime": "23:00:00" }] },
+                      { "Weekday": "TUES", "Slots": [{ "StartTime": "08:00:00", "EndTime": "23:00:00" }] },
+                      { "Weekday": "WED", "Slots": [{ "StartTime": "15:00:00", "EndTime": "23:00:00" }] },
+                      { "Weekday": "THURS", "Slots": [{ "StartTime": "08:00:00", "EndTime": "23:00:00" }] },
+                      { "Weekday": "FRI", "Slots": [{ "StartTime": "15:00:00", "EndTime": "22:00:00" }] },
+                      { "Weekday": "SAT", "Slots": [{ "StartTime": "08:00:00", "EndTime": "22:00:00" }] },
+                      { "Weekday": "SUN", "Slots": [{ "StartTime": "08:00:00", "EndTime": "23:00:00" }] }
+                    ]
+                  },
+                  {
+                    "roomNumber": "213",
+                    "buildingCode": "OL",
+                    "Schedule": [
+                      { "Weekday": "MON", "Slots": [{ "StartTime": "08:00:00", "EndTime": "10:30:00" }, { "StartTime": "12:30:00", "EndTime": "23:00:00" }] },
+                      { "Weekday": "TUES", "Slots": [{ "StartTime": "08:00:00", "EndTime": "10:30:00" }, { "StartTime": "13:00:00", "EndTime": "23:00:00" }] },
+                      { "Weekday": "WED", "Slots": [{ "StartTime": "08:00:00", "EndTime": "10:30:00" }, { "StartTime": "12:30:00", "EndTime": "23:00:00" }] },
+                      { "Weekday": "THURS", "Slots": [{ "StartTime": "08:00:00", "EndTime": "10:30:00" }, { "StartTime": "13:00:00", "EndTime": "23:00:00" }] },
+                      { "Weekday": "FRI", "Slots": [{ "StartTime": "08:00:00", "EndTime": "10:30:00" }, { "StartTime": "12:30:00", "EndTime": "22:00:00" }] },
+                      { "Weekday": "SAT", "Slots": [{ "StartTime": "08:00:00", "EndTime": "22:00:00" }] },
+                      { "Weekday": "SUN", "Slots": [{ "StartTime": "08:00:00", "EndTime": "23:00:00" }] }
+                    ]
+                  },
+                  {
+                    "roomNumber": "209",
+                    "buildingCode": "OL",
+                    "Schedule": [
+                      { "Weekday": "MON", "Slots": [{ "StartTime": "13:30:00", "EndTime": "23:00:00" }] },
+                      { "Weekday": "TUES", "Slots": [{ "StartTime": "08:00:00", "EndTime": "23:00:00" }] },
+                      { "Weekday": "WED", "Slots": [{ "StartTime": "13:30:00", "EndTime": "23:00:00" }] },
+                      { "Weekday": "THURS", "Slots": [{ "StartTime": "08:00:00", "EndTime": "23:00:00" }] },
+                      { "Weekday": "FRI", "Slots": [{ "StartTime": "13:30:00", "EndTime": "22:00:00" }] },
+                      { "Weekday": "SAT", "Slots": [{ "StartTime": "08:00:00", "EndTime": "22:00:00" }] },
+                      { "Weekday": "SUN", "Slots": [{ "StartTime": "08:00:00", "EndTime": "23:00:00" }] }
+                    ]
+                  },
+                  {
+                    "roomNumber": "208",
+                    "buildingCode": "OL",
+                    "Schedule": [
+                      { "Weekday": "MON", "Slots": [{ "StartTime": "15:00:00", "EndTime": "23:00:00" }] },
+                      { "Weekday": "TUES", "Slots": [{ "StartTime": "08:00:00", "EndTime": "10:30:00" }, { "StartTime": "16:30:00", "EndTime": "23:00:00" }] },
+                      { "Weekday": "WED", "Slots": [{ "StartTime": "15:00:00", "EndTime": "23:00:00" }] },
+                      { "Weekday": "THURS", "Slots": [{ "StartTime": "08:00:00", "EndTime": "10:30:00" }, { "StartTime": "16:30:00", "EndTime": "23:00:00" }] },
+                      { "Weekday": "FRI", "Slots": [{ "StartTime": "15:00:00", "EndTime": "22:00:00" }] },
+                      { "Weekday": "SAT", "Slots": [{ "StartTime": "08:00:00", "EndTime": "22:00:00" }] },
+                      { "Weekday": "SUN", "Slots": [{ "StartTime": "08:00:00", "EndTime": "23:00:00" }] }
+                    ]
+                  }
+                ]
+              }
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [43.31321583934743, -91.80299349007018]
+            }
+          }
+          ,
+        {
+          "type": "Feature",
+          "properties": {
+            "buildingId": "3",
+            "buildingCode": "CFA",
+            "buildingName": "Center for the Arts",
+            "supportOpenClassroom": true,
+            "openClassroomSlots": {
+              "data": [
+                {
+                  "roomNumber": "119",
+                  "buildingCode": "CFA",
+                  "Schedule": [
+                    { "Weekday": "MON", "Slots": [{ "StartTime": "08:00:00", "EndTime": "23:00:00" }] },
+                    { "Weekday": "TUES", "Slots": [{ "StartTime": "08:00:00", "EndTime": "10:30:00" }, { "StartTime": "13:00:00", "EndTime": "23:00:00" }] },
+                    { "Weekday": "WED", "Slots": [{ "StartTime": "08:00:00", "EndTime": "23:00:00" }] },
+                    { "Weekday": "THURS", "Slots": [{ "StartTime": "08:00:00", "EndTime": "10:30:00" }, { "StartTime": "13:00:00", "EndTime": "23:00:00" }] },
+                    { "Weekday": "FRI", "Slots": [{ "StartTime": "08:00:00", "EndTime": "22:00:00" }] },
+                    { "Weekday": "SAT", "Slots": [{ "StartTime": "08:00:00", "EndTime": "22:00:00" }] },
+                    { "Weekday": "SUN", "Slots": [{ "StartTime": "08:00:00", "EndTime": "23:00:00" }] }
+                  ]
+                },
+                {
+                  "roomNumber": "118",
+                  "buildingCode": "CFA",
+                  "Schedule": [
+                    { "Weekday": "MON", "Slots": [{ "StartTime": "13:20:00", "EndTime": "23:00:00" }] },
+                    { "Weekday": "TUES", "Slots": [{ "StartTime": "08:00:00", "EndTime": "10:30:00" }, { "StartTime": "14:30:00", "EndTime": "23:00:00" }] },
+                    { "Weekday": "WED", "Slots": [{ "StartTime": "13:20:00", "EndTime": "23:00:00" }] },
+                    { "Weekday": "THURS", "Slots": [{ "StartTime": "08:00:00", "EndTime": "10:30:00" }, { "StartTime": "14:30:00", "EndTime": "23:00:00" }] },
+                    { "Weekday": "FRI", "Slots": [{ "StartTime": "13:20:00", "EndTime": "22:00:00" }] },
+                    { "Weekday": "SAT", "Slots": [{ "StartTime": "08:00:00", "EndTime": "22:00:00" }] },
+                    { "Weekday": "SUN", "Slots": [{ "StartTime": "08:00:00", "EndTime": "23:00:00" }] }
+                  ]
+                }
+              ]
+            },
+            "lastUpdated": "2024-11-11T21:00:55Z"
+          },
+          "geometry": { "type": "Point", "coordinates": [43.31045201569205, -91.80241366325215] }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+              "buildingId": "4",
+              "buildingCode": "KOR",
+              "buildingName": "Koren",
+              "supportOpenClassroom": true,
+              "openClassroomSlots": {
+                "data": [
+                  {
+                    "roomNumber": "117",
+                    "buildingCode": "KOR",
+                    "Schedule": [
+                      { "Weekday": "MON", "Slots": [{ "StartTime": "08:00:00", "EndTime": "10:30:00" }, { "StartTime": "15:00:00", "EndTime": "23:00:00" }] },
+                      { "Weekday": "TUES", "Slots": [{ "StartTime": "14:30:00", "EndTime": "23:00:00" }] },
+                      { "Weekday": "WED", "Slots": [{ "StartTime": "08:00:00", "EndTime": "10:30:00" }, { "StartTime": "15:00:00", "EndTime": "23:00:00" }] },
+                      { "Weekday": "THURS", "Slots": [{ "StartTime": "14:30:00", "EndTime": "23:00:00" }] },
+                      { "Weekday": "FRI", "Slots": [{ "StartTime": "08:00:00", "EndTime": "10:30:00" }, { "StartTime": "15:00:00", "EndTime": "22:00:00" }] },
+                      { "Weekday": "SAT", "Slots": [{ "StartTime": "08:00:00", "EndTime": "22:00:00" }] },
+                      { "Weekday": "SUN", "Slots": [{ "StartTime": "08:00:00", "EndTime": "23:00:00" }] }
+                    ]
+                  },
+                  {
+                    "roomNumber": "120",
+                    "buildingCode": "KOR",
+                    "Schedule": [
+                      { "Weekday": "MON", "Slots": [{ "StartTime": "13:30:00", "EndTime": "23:00:00" }] },
+                      { "Weekday": "TUES", "Slots": [{ "StartTime": "08:00:00", "EndTime": "10:30:00" }, { "StartTime": "12:45:00", "EndTime": "14:15:00" }, { "StartTime": "16:30:00", "EndTime": "23:00:00" }] },
+                      { "Weekday": "WED", "Slots": [{ "StartTime": "13:30:00", "EndTime": "23:00:00" }] },
+                      { "Weekday": "THURS", "Slots": [{ "StartTime": "08:00:00", "EndTime": "10:30:00" }, { "StartTime": "12:45:00", "EndTime": "14:15:00" }, { "StartTime": "16:30:00", "EndTime": "23:00:00" }] },
+                      { "Weekday": "FRI", "Slots": [{ "StartTime": "13:30:00", "EndTime": "22:00:00" }] },
+                      { "Weekday": "SAT", "Slots": [{ "StartTime": "08:00:00", "EndTime": "22:00:00" }] },
+                      { "Weekday": "SUN", "Slots": [{ "StartTime": "08:00:00", "EndTime": "23:00:00" }] }
+                    ]
+                  },
+                  {
+                    "roomNumber": "217",
+                    "buildingCode": "KOR",
+                    "Schedule": [
+                      { "Weekday": "MON", "Slots": [{ "StartTime": "14:50:00", "EndTime": "17:30:00" }] },
+                      { "Weekday": "TUES", "Slots": [{ "StartTime": "16:15:00", "EndTime": "23:00:00" }] },
+                      { "Weekday": "WED", "Slots": [{ "StartTime": "14:50:00", "EndTime": "17:30:00" }] },
+                      { "Weekday": "THURS", "Slots": [{ "StartTime": "16:15:00", "EndTime": "23:00:00" }] },
+                      { "Weekday": "FRI", "Slots": [{ "StartTime": "14:45:00", "EndTime": "22:00:00" }] },
+                      { "Weekday": "SAT", "Slots": [{ "StartTime": "08:00:00", "EndTime": "22:00:00" }] },
+                      { "Weekday": "SUN", "Slots": [{ "StartTime": "08:00:00", "EndTime": "23:00:00" }] }
+                    ]
+                  },
+                  {
+                    "roomNumber": "216",
+                    "buildingCode": "KOR",
+                    "Schedule": [
+                      { "Weekday": "MON", "Slots": [{ "StartTime": "16:00:00", "EndTime": "23:00:00" }] },
+                      { "Weekday": "TUES", "Slots": [{ "StartTime": "08:00:00", "EndTime": "10:30:00" }, { "StartTime": "13:00:00", "EndTime": "23:00:00" }] },
+                      { "Weekday": "WED", "Slots": [{ "StartTime": "16:00:00", "EndTime": "23:00:00" }] },
+                      { "Weekday": "THURS", "Slots": [{ "StartTime": "08:00:00", "EndTime": "10:30:00" }, { "StartTime": "13:00:00", "EndTime": "23:00:00" }] },
+                      { "Weekday": "FRI", "Slots": [{ "StartTime": "16:00:00", "EndTime": "22:00:00" }] },
+                      { "Weekday": "SAT", "Slots": [{ "StartTime": "08:00:00", "EndTime": "22:00:00" }] },
+                      { "Weekday": "SUN", "Slots": [{ "StartTime": "08:00:00", "EndTime": "23:00:00" }] }
+                    ]
+                  },
+                  {
+                    "roomNumber": "218",
+                    "buildingCode": "KOR",
+                    "Schedule": [
+                      { "Weekday": "MON", "Slots": [{ "StartTime": "16:00:00", "EndTime": "23:00:00" }] },
+                      { "Weekday": "TUES", "Slots": [{ "StartTime": "14:30:00", "EndTime": "23:00:00" }] },
+                      { "Weekday": "WED", "Slots": [{ "StartTime": "16:00:00", "EndTime": "23:00:00" }] },
+                      { "Weekday": "THURS", "Slots": [{ "StartTime": "14:30:00", "EndTime": "23:00:00" }] },
+                      { "Weekday": "FRI", "Slots": [{ "StartTime": "16:00:00", "EndTime": "22:00:00" }] },
+                      { "Weekday": "SAT", "Slots": [{ "StartTime": "08:00:00", "EndTime": "22:00:00" }] },
+                      { "Weekday": "SUN", "Slots": [{ "StartTime": "08:00:00", "EndTime": "23:00:00" }] }
+                    ]
+                  }
+                ]
+              }
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [43.31071067347278, -91.80393943081089]
+            }
+          }
+          
+      ]
+    }
+  }
+  
