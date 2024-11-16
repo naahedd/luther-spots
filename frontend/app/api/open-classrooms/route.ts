@@ -1,13 +1,20 @@
 // /app/api/open-classrooms/route.ts
 import { NextResponse } from "next/server";
+
+// Use environment variable for backend URL
 const backendUrl = 'https://luther-spots.onrender.com';
+
+// Helper to ensure consistent URL formatting
+const getBackendUrl = (path: string) => {
+    const baseUrl = backendUrl.endsWith('/') ? backendUrl.slice(0, -1) : backendUrl;
+    return `${baseUrl}${path}`;
+};
 
 export async function POST(req: Request) {
     try {
         const { lat, lng } = await req.json();
 
-        // Make a request to the local backend
-        const response = await fetch(`${backendUrl}/api/open-classrooms`, {
+        const response = await fetch(getBackendUrl('/api/open-classrooms'), {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -16,9 +23,10 @@ export async function POST(req: Request) {
         });
 
         if (!response.ok) {
+            console.error(`Backend responded with status: ${response.status}`);
             return NextResponse.json(
-                { error: "Failed to fetch data" },
-                { status: 500 }
+                { error: `Failed to fetch data: ${response.statusText}` },
+                { status: response.status }
             );
         }
 
@@ -35,15 +43,19 @@ export async function POST(req: Request) {
 
 export async function GET() {
     try {
-        const response = await fetch(`${backendUrl}/api/open-classrooms`, {
+        const response = await fetch(getBackendUrl('/api/open-classrooms'), {
             method: "GET",
+            headers: {
+                "Accept": "application/json",
+            },
             cache: "no-cache",
         });
 
         if (!response.ok) {
+            console.error(`Backend responded with status: ${response.status}`);
             return NextResponse.json(
-                { error: "Failed to fetch data" },
-                { status: 500 }
+                { error: `Failed to fetch data: ${response.statusText}` },
+                { status: response.status }
             );
         }
 
