@@ -31,6 +31,11 @@ def get_slot_status(current_time, start_time_str, end_time_str):
     else:
         return "unavailable"
 
+@app.route('/')
+def home():
+    return jsonify({"message": "Welcome to the Open Classrooms API!"})
+
+
 @app.route('/api/open-classrooms', methods=['GET', 'POST'])
 def get_open_classrooms():
     user_lat = 0
