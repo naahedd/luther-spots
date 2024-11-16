@@ -1,8 +1,8 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect, useState, useCallback } from "react";
 import mapboxgl from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 
-interface dataFormat {
+interface DataFormat {
     building: string;
     building_code: string;
     building_status: string;
@@ -21,21 +21,22 @@ export default function Map({
     handleMarkerClick,
     userPos,
 }: {
-    data: dataFormat[];
+    data: DataFormat[];
     handleMarkerClick: (building: string) => void;
     userPos: [number, number] | null;
 }) {
     const mapRef = useRef<mapboxgl.Map | null>(null);
     const mapContainerRef = useRef<HTMLDivElement | null>(null);
+    const markersRef = useRef<mapboxgl.Marker[]>([]); // Store markers to manage updates
 
     const [center] = useState<[number, number]>([-91.803, 43.3125]);
-    const [zoom] = useState(16.50)
+    const [zoom] = useState(16.5);
     const [pitch] = useState(52);
     const [bearing] = useState(40);
 
-    const mapboxToken = "pk.eyJ1IjoiZWxnaG91bCIsImEiOiJjbTNkdWd1cWYwN3piMmtwcWFmcTVvanU2In0.dGrQb79ZD8CeUQeoWNfGcg";
+    const mapboxToken = "pk.eyJ1IjoiZWxnaG91bCIsImEiOiJjbTNkdWd1cWYwN3piMmtwcWFmcTVvanU2In0.dGrQb79ZD8CeUQeoWNfGcg"; //public api btw
 
-    function getColorByStatus(status: string) {
+    const getColorByStatus = useCallback((status: string) => {
         switch (status) {
             case "available":
                 return "h-2 w-2 rounded-full bg-green-400 shadow-[0px_0px_4px_2px_rgba(34,197,94,0.7)]";
@@ -46,52 +47,49 @@ export default function Map({
             default:
                 return "gray";
         }
-    }
+    }, []);
 
     // Initialize map once
     useEffect(() => {
         mapboxgl.accessToken = mapboxToken;
 
-        mapRef.current = new mapboxgl.Map({
+        const map = new mapboxgl.Map({
             container: mapContainerRef.current as HTMLElement,
-            style: "mapbox://styles/elghoul/cm3i7q35b001301s69v08h2jr", // Using the new standard style
-            center: center,
-            zoom: zoom,
-            pitch: pitch,
-            bearing: bearing,
-            antialias: true
+            style: "mapbox://styles/elghoul/cm3i7q35b001301s69v08h2jr",
+            center,
+            zoom,
+            pitch,
+            bearing,
+            antialias: true,
         });
 
-        const map = mapRef.current;
+        mapRef.current = map;
 
-        // Set the light preset to dusk when the style is loaded
-        map.on("style.load", () => {
-            map.setConfigProperty("basemap", "lightPreset", "dusk");
-        });
-
+        // Cleanup map on unmount
         return () => {
             map.remove();
         };
     }, [center, zoom, pitch, bearing]);
 
-    // Update markers based on data or user position changes
+    // Update markers when data or user position changes
     useEffect(() => {
         const map = mapRef.current;
         if (!map) return;
 
         // Remove existing markers
-        const markers: mapboxgl.Marker[] = [];
-        markers.forEach((marker) => marker.remove());
-        markers.length = 0;
+        markersRef.current.forEach((marker) => marker.remove());
+        markersRef.current = [];
 
-        // Add markers for buildings
+        // Add building markers
         data.forEach((building) => {
+            if (!building.coords) return;
+            const [lat, lng] = building.coords;
+
             const el = document.createElement("div");
             el.className = getColorByStatus(building.building_status);
 
             el.addEventListener("click", () => {
                 const accordionItem = document.getElementById(building.building_code);
-
                 setTimeout(() => {
                     if (accordionItem) {
                         accordionItem.scrollIntoView({
@@ -104,33 +102,27 @@ export default function Map({
                 handleMarkerClick(building.building_code);
             });
 
-            if (building.coords) {
-                const [lat, lng] = building.coords;
-                const marker = new mapboxgl.Marker(el)
-                    .setLngLat([lng, lat])
-                    .addTo(map);
-                markers.push(marker);
-            }
+            const marker = new mapboxgl.Marker(el).setLngLat([lng, lat]).addTo(map);
+            markersRef.current.push(marker);
         });
 
         // Add user position marker if available
         if (userPos) {
-            const e2 = document.createElement("div");
-            e2.className =
+            const userEl = document.createElement("div");
+            userEl.className =
                 "h-3 w-3 border-[1.5px] border-zinc-50 rounded-full bg-blue-400 shadow-[0px_0px_4px_2px_rgba(14,165,233,1)]";
 
             const [lat, lng] = userPos;
-            const userMarker = new mapboxgl.Marker(e2)
-                .setLngLat([lng, lat])
-                .addTo(map);
-            markers.push(userMarker);
+            const userMarker = new mapboxgl.Marker(userEl).setLngLat([lng, lat]).addTo(map);
+            markersRef.current.push(userMarker);
         }
 
-        // Cleanup markers on unmount
+        
         return () => {
-            markers.forEach((marker) => marker.remove());
+            markersRef.current.forEach((marker) => marker.remove());
+            markersRef.current = [];
         };
-    }, [data, userPos, handleMarkerClick]);
+    }, [data, userPos, getColorByStatus, handleMarkerClick]);
 
     return (
         <div className="h-[60vh] sm:w-full sm:h-full relative bg-red-500/0 rounded-[20px] p-2 sm:p-0">
