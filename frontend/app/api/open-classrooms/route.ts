@@ -1,12 +1,13 @@
 // /app/api/open-classrooms/route.ts
 import { NextResponse } from "next/server";
+const backendUrl = 'https://luther-spots.onrender.com/';
 
 export async function POST(req: Request) {
     try {
         const { lat, lng } = await req.json();
 
         // Make a request to the local backend
-        const response = await fetch("http://localhost:8080/api/open-classrooms", {
+        const response = await fetch(`${backendUrl}/api/open-classrooms`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -34,7 +35,7 @@ export async function POST(req: Request) {
 
 export async function GET() {
     try {
-        const response = await fetch("http://localhost:8080/api/open-classrooms", {
+        const response = await fetch(`${backendUrl}/api/open-classrooms`, {
             method: "GET",
             cache: "no-cache",
         });
