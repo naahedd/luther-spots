@@ -1,6 +1,6 @@
 // /app/api/open-classrooms/route.ts
 import { NextResponse } from "next/server";
-const backendUrl = 'https://luther-spots.onrender.com/';
+const backendUrl = 'https://luther-spots.onrender.com';
 
 export async function POST(req: Request) {
     try {
