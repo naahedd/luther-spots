@@ -5,7 +5,15 @@ import json
 import math
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={
+    r"/api/*": {
+        "origins": [
+            "http://localhost:3000",
+            "https://luther-spots.vercel.app",
+        ]
+    }
+})
+
 
 # Load JSON data for your college
 def load_college_data():
