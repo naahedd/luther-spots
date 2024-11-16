@@ -45,7 +45,7 @@ def get_slot_status(current_time, start_time_str, end_time_str):
     print(f"Minutes until start: {minutes_until_start}")
     
     # If current time is before start time and within 20 minutes
-    if 0 < minutes_until_start <= 20:
+    if 0 <= minutes_until_start <= 20:
         return "upcoming"
     # If current time is between start and end time
     elif start_minutes <= current_minutes <= end_minutes:
