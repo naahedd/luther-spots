@@ -2,7 +2,7 @@
 import { NextResponse } from "next/server";
 
 // Use environment variable for backend URL
-const backendUrl = 'https://luther-spots.onrender.com';
+const backendUrl = 'https://luther-spots-1.onrender.com';
 
 // Helper to ensure consistent URL formatting
 const getBackendUrl = (path: string) => {

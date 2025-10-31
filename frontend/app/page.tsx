@@ -27,7 +27,7 @@ interface dataFormat {
     distance: number;
 }
 
-const backendUrl = "https://luther-spots.onrender.com/api/open-classrooms";
+const backendUrl = "https://luther-spots-1.onrender.com/api/open-classrooms";
 
 export default function Home() {
     const [data, setData] = useState<dataFormat[]>([]);
